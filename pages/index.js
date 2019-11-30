@@ -17,7 +17,7 @@ function Index() {
                 <Paragraph />
             </Section>
             <Section title="02. Color">
-                <Color colors={["white", "black-19", "black-39", "black-59", "black-79", "black-100"]} />
+                <Color colors={ ["0", "0.19", "0.39", "0.59", "0.79", "1"] } />
             </Section>
         </>
     )

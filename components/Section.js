@@ -14,9 +14,9 @@ function Section(props) {
 
     return (
         <section className="container" style={ ctnrStyle }>
-            <Title title={props.title}/>
+            <Title title={ props.title }/>
             <div className="content" style={ ctntStyle }>
-                {props.children}
+                { props.children }
             </div>
         </section>
     )

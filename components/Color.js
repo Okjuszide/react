@@ -3,9 +3,11 @@ function Color(props) {
 
     return (
         <div className="color">
-            {arr.map((item) => {
-                return <div className={`box ${item}`}></div>
-            })}
+            {
+                arr.map( (item) => {
+                    return <div className={`box ${ item }`}></div>
+                })
+            }
         </div>
     )
 }

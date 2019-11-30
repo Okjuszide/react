@@ -12,7 +12,7 @@ function Title(props) {
 
     return (
         <div className="title" style={ titleStyle }>
-            <h2 style={ h2Style }>{props.title}</h2>
+            <h2 style={ h2Style }>{ props.title }</h2>
         </div>
     )
 }
