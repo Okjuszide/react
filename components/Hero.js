@@ -1,18 +1,16 @@
 function Hero() {
-    let heroStyle = {
-            height: "15em",
-            backgroundColor: "rgba(0, 0, 0, 0.79)"
-        },
-        h1Style = {
-            fontSize: "5.6em",
-            color: "lightblue"
-        }
-
-
-    return  (
-        <div className="hero" style={ heroStyle }>
-            <h1 style={ h1Style }>Style guide</h1>
+    return (
+        <>
+        <div className="hero">
+            <h1>Style Guide</h1>
         </div>
+        <style jsx>{`
+            .hero {
+                height: 15em;
+                background-color: rgba(0, 0, 0, 0.79);
+            }
+        `}</style>
+        </>
     )
 }
 
