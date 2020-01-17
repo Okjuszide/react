@@ -1,10 +1,10 @@
 import { Component } from 'react'
 
 class Headings extends Component {
-    constructor(props) {
-        super(props)
+    constructor( props ) {
+        super( props )
     }
-
+    
     render() {
         return (
             <div className="headings">
@@ -15,23 +15,26 @@ class Headings extends Component {
 
                 <style jsx>{`
                     h1, h2, h3, h4, p {
-                        font-family: ${this.props.font}
+                        font-family: ${ this.props.font }
                     }
 
                     .headings {
-                        width: 30em;
+                        width: 40em;
                         margin: 2em;
                     }
 
                     h1 {
                         font-size: 5.6em;
                     }
+
                     h2 {
                         font-size: 4.2em;
                     }
+
                     h3 {
                         font-size: 3.15em;
                     }
+
                     h4 {
                         font-size: 2.3625em;
                     }

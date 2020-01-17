@@ -4,6 +4,7 @@ function Hero() {
         <div className="hero">
             <h1>Style Guide</h1>
         </div>
+        
         <style jsx>{`
             .hero {
                 height: 15em;

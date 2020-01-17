@@ -1,12 +1,12 @@
 import Title from "./Title"
 
-function Section(props) {
+function Section( props ) {
     return (
         <>
-        <section className="container">
-            <Title title={props.title}/>
+        <section className="container" >
+            <Title title={ props.title }/>
             <div className="content">
-                {props.children}
+                { props.children }
             </div>
         </section>
 
@@ -25,6 +25,7 @@ function Section(props) {
             .content > div {
                 padding: 30px;
             }  
+
         `}</style>
         </>
     )
