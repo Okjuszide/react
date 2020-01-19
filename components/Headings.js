@@ -20,7 +20,7 @@ class Headings extends Component {
 
                     .headings {
                         width: 40em;
-                        margin: 2em;
+                        margin: 2em 4em;
                     }
 
                     h1 {

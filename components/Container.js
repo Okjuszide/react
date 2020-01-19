@@ -5,6 +5,16 @@ import Headings from "./Headings"
 import Paragraph from './Paragraph'
 import Menu from './Menu'
 
+const whiteToBlack = [
+    "white", 
+    "rgba(0,0,0, .19)",
+    "rgba(0,0,0, .39)", 
+    "rgba(0,0,0, .59)", 
+    "rgba(0,0,0, .79)", 
+    "rgba(0,0,0, .89", 
+    "black"
+]
+
 class Container extends Component {
     
     constructor(props) {
@@ -14,7 +24,7 @@ class Container extends Component {
             font: 'sans-serif',
             color: [
                 'rgba(0, 0, 255, .3)',
-                'rgba(0, 0, 255, .8)',
+                'rgba(0, 0, 255, .7)',
                 'blue'
             ]
         }
@@ -23,41 +33,26 @@ class Container extends Component {
         this.changeColor = this.changeColor.bind(this)
     }
 
-    changeFont() {
+    changeFont(e) {
         this.setState({
-            font: (this.state.font == 'serif' ? 'sans-serif' : 'serif')
+            font: e.target[e.target.selectedIndex].value
         })
     }
 
     changeColor(e) {
-        switch(e.target.value) {
-            case 'red':
-                this.setState({
-                    color: [
-                        'rgba(255, 0, 0, .3)',
-                        'rgba(255, 0, 0, .8)',
-                        'red'
-                    ]
-                })
-            break;
-            case 'blue': 
-                this.setState({
-                    color: [
-                        'rgba(0, 0, 255, .3)',
-                        'rgba(0, 0, 255, .8)',
-                        'blue'
-                    ]
-                })
-            break;
-            default: 
-                this.setState({
-                    color: [
-                        'rgba(0, 0, 255, .3)',
-                        'rgba(0, 0, 255, .8)',
-                        'blue'
-                    ]
-                })
-        }
+
+        let hex = e.target.value.replace('#','');
+        let r = parseInt(hex.substring(0,2), 16);
+        let g = parseInt(hex.substring(2,4), 16);
+        let b = parseInt(hex.substring(4,6), 16);
+            
+        this.setState({
+            color: [
+                `rgba(${r}, ${g}, ${b}, .3)`,
+                `rgba(${r}, ${g}, ${b}, .7)`,
+                `rgb(${r}, ${g}, ${b})`
+            ]
+        })
     }
 
     render() {
@@ -69,7 +64,7 @@ class Container extends Component {
                 <Paragraph font={ this.state.font }/>
             </Section>
             <Section title="02.Color">
-                <Color colors={["white", "rgba(0,0,0, .19)", "rgba(0,0,0, .39)", "rgba(0,0,0, .59)", "rgba(0,0,0, .79)", "rgba(0,0,0, .89", "black"]}/>
+                <Color colors={ whiteToBlack }/>
                 <Color colors={ this.state.color } />
             </Section>
             </>

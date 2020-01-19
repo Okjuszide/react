@@ -10,6 +10,7 @@ function Paragraph( props ) {
                     width: 40em;
                     text-align: justify;
                     font-family: ${ props.font };
+                    margin: 2em 0;
                 }
 
                 p {

@@ -14,14 +14,17 @@ function Section( props ) {
             .container {
                 display: flex;
             }
+
             p {
                 font-size: 1.8em;
-                }
+            }
+
             .content {
                 display: flex;
                 flex-wrap: wrap;
                 max-width: 100em;
             }
+            
             .content > div {
                 padding: 30px;
             }  
